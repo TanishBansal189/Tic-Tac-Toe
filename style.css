@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    ---bg-color:#191919;
+    ---box-color:#750E21;
+    ---heading-color:#E3651D;
+    ---light-color:#BED754;
+}
+body{
+    background-color: var(---bg-color);
+}
+h1{
+    margin-top: 20px;
+    color: var(---heading-color);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom:30px;
+}
+.container{
+    height:70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:6vmin;
+}
+.game{
+    height:60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+.boxes{
+    height: 18vmin;
+    width:18vmin;
+    border-radius: 1rem;
+    border: none;
+    background-color:var(---box-color);
+    font-size: 8vmin;
+    color: var(---light-color);
+}
+#Reset{
+    background-color: var(---box-color);
+    color: var(---light-color);
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+.winner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5vmin;
+}
+#New{
+    background-color: var(---box-color);
+    color: var(---light-color);
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+#win{
+    color: var(---light-color);
+    font-size: 7vmin;
+}
+.hide{
+    display: none;
+}
+@media (max-width: 767px) {
+    .container {
+      height: auto;
+    }
+    .game {
+      height: 50vmin;
+      width: 50vmin;
+    }
+    .boxes {
+      height: 10vmin;
+      width: 10vmin;
+      font-size: 4vmin;
+    }
+    #Reset,
+    #New {
+      font-size: 1rem;
+    }
+    #win {
+      font-size: 5vmin;
+    }
+  }
+  
+  /* For screens larger than 768px (i.e. desktops) */
+  @media (min-width: 768px) {
+    .container {
+      height: 70vh;
+    }
+    .game {
+      height: 60vmin;
+      width: 60vmin;
+    }
+    .boxes {
+      height: 18vmin;
+      width: 18vmin;
+      font-size: 8vmin;
+    }
+    #Reset,
+    #New {
+      font-size: 1.25rem;
+    }
+    #win {
+      font-size: 7vmin;
+    }
+  }
